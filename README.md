@@ -13,6 +13,17 @@ This project demonstrates how AI can act as a **self-correcting coding assistant
 - **Feedback Loop** → Automatically retries until a correct solution is reached.  
 
 ---
+User: write a simple factorial program in any language
+
+Planner Agent → Creates step-by-step instructions  
+Coder Agent   → Writes Python code for factorial  
+Evaluator     → Reviews correctness & edge cases  
+               - Accepts ✅ if correct  
+               - Rejects ❌ with feedback if issues found  
+Feedback Loop → Coder retries with evaluator feedback  
+
+Final Output: ✅ Correct factorial program
+---
 
 ## 🧩 Tech Stack
 - **[LangChain](https://python.langchain.com/)** → Agent orchestration & LLM interfaces.  
@@ -23,9 +34,17 @@ This project demonstrates how AI can act as a **self-correcting coding assistant
 
 ---
 
-## 🚀 Getting Started
 
-### 1️⃣ Clone the repository
+## ⚡ Quick Start  
+
+### 1️⃣ Clone the repo  
+
 ```bash
 git clone https://github.com/your-username/multi-agent-coding-assistant.git
-cd multi-agent-coding-assistant
+cd Multi-Agent
+
+# Install dependencies using uv (reads pyproject.toml + uv.lock)
+uv sync
+
+# Run your app
+uv run main.py
