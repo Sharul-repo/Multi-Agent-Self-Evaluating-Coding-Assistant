@@ -80,4 +80,11 @@ if __name__ == "__main__":
     def main():
         res=flow.invoke({"messages":"write a simple factorial program in any language"})
         print(res)
+        print("\n")
+        print("\n")
+        print("\n")
+        print("\n")
+        print("Just the code : ")
+        code=res["code"].content
+        print(code)
     main()
